@@ -38,6 +38,17 @@ jobs:
           NEXT_PUBLIC_BASE_PATH: ${{ github.event.repository.name == format('{0}.github.io', github.event.repository.owner) && '' || format('/{0}', github.event.repository.name) }}
         run: npm run build
 
+      - name: Debug - Show build output
+        run: |
+          echo "=== NEXT_PUBLIC_BASE_PATH was: $NEXT_PUBLIC_BASE_PATH ==="
+          echo "=== Repo: ${{ github.event.repository.owner }}/${{ github.event.repository.name }} ==="
+          echo "=== Contents of out/ (first 30 items) ==="
+          ls -la out/ 2>/dev/null || echo "ERROR: out/ folder not found!"
+          echo "=== Check for index.html ==="
+          ls -la out/index.html 2>/dev/null || echo "ERROR: out/index.html missing!"
+          echo "=== Top-level files in out/ ==="
+          find out -maxdepth 1 -type f 2>/dev/null || true
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
