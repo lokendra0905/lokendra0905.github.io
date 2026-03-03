@@ -1,0 +1,68 @@
+export const experienceContent = {
+  comment: "// experience",
+  heading: "Where I've Worked",
+  items: [
+    {
+      company: "Tripjack",
+      role: "Software Development Engineer – I",
+      period: "Nov 2024 — Present",
+      url: undefined as string | undefined,
+      description: [
+        "Architected and implemented a fare validation system that reduced pending booking failures by 50%, significantly improving transaction reliability.",
+        "Designed and launched a Quick Pay checkout flow, reducing booking and payment completion time by 30% and increasing conversion efficiency.",
+        "Engineered a scalable agent onboarding and authentication workflow, accelerating activation and reducing operational friction.",
+        "Built TripAssist, a high-impact post-booking self-service module processing 10,000+ bookings daily for ancillary management.",
+        "Optimized frontend rendering across API-heavy booking workflows, minimizing UI disruptions during critical payment flows.",
+        "Implemented and maintained airline integrations using NDC standards, covering search, booking, cancellation, and reissue flows.",
+      ],
+      tech: [
+        "React",
+        "Next.js",
+        "Redux",
+        "Node.js",
+        "REST APIs",
+        "NDC Integrations",
+      ],
+    },
+    {
+      company: "Outlier.ai",
+      role: "AI Systems Evaluation & Training Engineer",
+      period: "Apr 2024 — Jan 2025",
+      url: undefined as string | undefined,
+      description: [
+        "Evaluated large language model (LLM) outputs across technical and reasoning-heavy prompts to ensure accuracy, coherence, and instruction adherence.",
+        "Provided structured feedback and corrective analysis to improve model reasoning depth and contextual reliability.",
+        "Identified recurring failure patterns and edge cases, contributing to iterative refinement of AI response quality.",
+        "Designed diverse prompt variations to stress-test model robustness across programming and system-design scenarios.",
+        "Collaborated within evaluation pipelines focused on enhancing AI performance in software engineering domains.",
+      ],
+      tech: [
+        "LLM Evaluation",
+        "Prompt Engineering",
+        "AI Quality Assurance",
+        "Reasoning Analysis",
+      ],
+    },
+    {
+      company: "Apna School App",
+      role: "Full-Stack Developer",
+      period: "May 2023 — Mar 2024",
+      url: undefined as string | undefined,
+      description: [
+        "Developed full-stack features across School Management, Job Search, and Lead Management platforms.",
+        "Built modular REST APIs using Node.js and Express with structured middleware and error handling.",
+        "Designed responsive React interfaces with optimized state management for dynamic user workflows.",
+        "Modeled and optimized MongoDB schemas to support scalable data access patterns.",
+        "Improved application stability and performance through structured state management and backend optimization.",
+      ],
+      tech: [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Zustand",
+        "REST APIs",
+      ],
+    },
+  ],
+} as const;
