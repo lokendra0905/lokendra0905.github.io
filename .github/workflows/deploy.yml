@@ -31,11 +31,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      # User site (lokendra.github.io): repo name must be "lokendra.github.io" → basePath = ""
-      # Otherwise treated as project site → basePath = /repo-name
+      # User site at root (e.g. lokendra0905.github.io): must use empty basePath so CSS/JS load correctly
       - name: Build
         env:
-          NEXT_PUBLIC_BASE_PATH: ${{ github.event.repository.name == format('{0}.github.io', github.event.repository.owner) && '' || format('/{0}', github.event.repository.name) }}
+          NEXT_PUBLIC_BASE_PATH: ""
         run: npm run build
 
       - name: Debug - Show build output
